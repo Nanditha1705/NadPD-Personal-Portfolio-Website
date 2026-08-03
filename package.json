@@ -1,0 +1,27 @@
+{
+  "name": "nadpd-personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio of Peddineni Nanditha — Learner, Creator, designer, writer, developer.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nanditha1705/NadPD-Personal-Portfolio-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nanditha1705/NadPD-Personal-Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/Nanditha1705/NadPD-Personal-Portfolio-Website#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
