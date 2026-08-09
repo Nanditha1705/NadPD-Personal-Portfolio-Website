@@ -15,7 +15,7 @@ document.querySelectorAll('.nav__links a').forEach((link) => {
 /* =========================================================
    2. TYPING ROLE EFFECT
 ========================================================= */
-const roles = ['Developer', 'Creator', 'Designer', 'Writer' , 'Lifelong Learner'];
+const roles = ['Peddineni Nanditha.','Integrated MTech Student.', 'Creator.', 'Designer.','Developer.', 'Perpectual Learner.'];
 const typedEl = document.getElementById('typedRole');
 let roleIndex = 0, charIndex = 0, deleting = false;
 
@@ -47,7 +47,8 @@ typeLoop();
 ========================================================= */
 const revealTargets = document.querySelectorAll(
   '.section__eyebrow, .section__title, .section__lead, ' +
-  '.about__grid, .timeline__item, .project-card, .cert-card, .contact__grid, .skills__filters'
+  '.about__panel, .timeline__item, .project-card, .cert-card, .contact__grid, ' +
+  '.skills__filters, .profiles__avatar, .profile-card'
 );
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
@@ -66,9 +67,7 @@ revealTargets.forEach((el) => revealObserver.observe(el));
 
 /* =========================================================
    4. SKILLS FILTER TABS
-   Each .skill-tile has a data-category attribute (can hold more
-   than one, space-separated, e.g. "frontend backend") for skills
-   that span categories, like Next.js.
+   
 ========================================================= */
 const filterPills = document.querySelectorAll('.filter-pill');
 const skillTiles = document.querySelectorAll('.skill-tile');
@@ -89,9 +88,7 @@ filterPills.forEach((pill) => {
 
 /* =========================================================
    5. CONTACT FORM
-   Default: opens the user's email client via mailto.
-   Swap this out for EmailJS / Formspree / your own backend —
-   see the "Wiring up the contact form" step in the guide.
+   
 ========================================================= */
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
@@ -104,13 +101,48 @@ form.addEventListener('submit', (e) => {
 
   const subject = encodeURIComponent(`Portfolio contact from ${name}`);
   const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-  window.location.href = `mailto:nandithapeddineni@example.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:nanda.kongie45@gmail.com?subject=${subject}&body=${body}`;
 
   status.textContent = 'Opening your email client…';
   form.reset();
 });
 
 /* =========================================================
-   6. FOOTER YEAR
+   7. RESUME MODAL
+   
+========================================================= */
+const viewResumeBtn = document.getElementById('viewResumeBtn');
+const resumeModal = document.getElementById('resumeModal');
+const resumeBackdrop = document.getElementById('resumeModalBackdrop');
+const closeResumeModal = document.getElementById('closeResumeModal');
+const resumeIframe = document.getElementById('resumeIframe');
+const RESUME_PATH = '/assets/Nanditha_resume.pdf';
+
+function openResumeModal() {
+  resumeIframe.src = RESUME_PATH;
+  resumeModal.classList.add('is-open');
+  resumeModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeResumeModalFn() {
+  resumeModal.classList.remove('is-open');
+  resumeModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  resumeIframe.src = ''; 
+}
+
+viewResumeBtn.addEventListener('click', openResumeModal);
+closeResumeModal.addEventListener('click', closeResumeModalFn);
+resumeBackdrop.addEventListener('click', closeResumeModalFn);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && resumeModal.classList.contains('is-open')) {
+    closeResumeModalFn();
+  }
+});
+
+/* =========================================================
+   8. FOOTER YEAR
 ========================================================= */
 document.getElementById('year').textContent = new Date().getFullYear();

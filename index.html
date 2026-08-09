@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peddineni_Nanditha's | Portfolio</title>
+<title>Nanditha's | Portfolio</title>
 <meta name="description" content="Personal portfolio of Peddineni Nanditha — Learner, Creator, designer,writer, developer.">
+<link rel="icon" href="assets/NadPD_Logo.png" type="image/jpeg">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +31,8 @@
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#profiles">Profiles</a>
     <a href="#contact">Contact</a>
   </nav>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
@@ -43,17 +46,21 @@
   <section class="hero" id="home">
     <p class="hero__eyebrow mono">// welcome to my corner of the web</p>
     <h1 class="hero__title">
-      Hi, I'm <span class="highlight">Peddineni Nanditha</span>.<br>
-      I'm charting my <span class="highlight">constellation</span>.
-    </h1>
-    <p class="hero__role mono">I am a <span id="typedRole"> Integrated MTech Student</span><span class="cursor-blink">|</span></p>
+      Hi, I'm <br>
+      <span class="highlight" id="typedRole"> Integrated MTech Student</span><span class="cursor-blink">|</span><br>
+
+     
+    </h1><h1>
+    <p> I'm charting my <span class="highlight">constellation!</span>.</p></h1>
+    <!--<p class="hero__role mono">I am a <span id="typedRole"> Integrated MTech Student</span><span class="cursor-blink">|</span></p>-->
     <p class="hero__sub">
       Every project, skill, and idea below is a point of light. Move your mouse
       and watch them connect — that's the map of what I'm building.
     </p>
     <div class="hero__cta">
       <a href="#projects" class="btn btn--primary">See my work</a>
-      <a href="/assets/resume.pdf" class="btn btn--ghost" download>Download Resume</a>
+      <button type="button" class="btn btn--ghost" id="viewResumeBtn">View Resume</button>
+     <!-- <a href="/assets/Nanditha_resume.pdf" class="btn btn--ghost" download>Download Resume</a>-->
     </div>
     <a href="#about" class="hero__scroll" aria-label="Scroll down">
       <i class="fa-solid fa-arrow-down"></i>
@@ -61,42 +68,38 @@
   </section>
 
   <!-- ===== ABOUT ===== -->
-  <section class="section" id="about">
+   <section class="section" id="about">
     <p class="section__eyebrow mono">01 / about</p>
-    <h2 class="section__title">A bit about me</h2>
-    <div class="about__grid">
-      <div class="about__photo">
-        <div class="about__photo-frame">
-          <img src="assets/profile.jpeg" alt="Nanda's profile photo">
-        </div>
-      </div>
-      <div class="about__text">
-        <p>
-          I'm a student who likes turning ideas into things that actually make a little difference
+    <div class="about__panel">
+      <h2 class="about__title">About Me - <span class="highlight">Behind The Code!</span></h2>
+      <div class="about__divider"><span></span></div>
+      <p>
+        I'm a student who likes turning ideas into things that actually make a little difference
           in this huge world.I enjoy building practical solutions that combine technology, 
           creativity, and user-centered design. From developing responsive web applications to 
           experimenting with deep learning models and cloud deployment, 
           I love exploring different areas of computer science.
-        </p>
-        <p>
-          I'm constantly learning, curious by nature, and enjoy stepping outside my comfort zone
+      </p>
+      <p>
+        I'm constantly learning, curious by nature, and enjoy stepping outside my comfort zone
           to explore new things that universe offers me. When I'm not coding, you'll probably
           find me writing, designing,reading or brainstorming my next creative project.
-        </p>
-        <div class="about__facts">
+      </p>
+      <div class="about__facts">
           <div class="fact"><span class="fact__num mono">9.19</span><span class="fact__label">GPA</span></div>
-          <div class="fact"><span class="fact__num mono">3
+          <div class="fact"><span class="fact__num mono">2
             +</span><span class="fact__label">Projects Built</span></div>
-          <div class="fact"><span class="fact__num mono">2</span><span class="fact__label">Certifications</span></div>
+          <div class="fact"><span class="fact__num mono">2 +</span><span class="fact__label">Certifications</span></div>
         </div>
-      </div>
     </div>
+    
   </section>
+  
 
   <!-- ===== EDUCATION / EXPERIENCE TIMELINE ===== -->
   <section class="section" id="education">
     <p class="section__eyebrow mono">02 / journey</p>
-    <h2 class="section__title">Education &amp; experience</h2>
+    <h2 class="section__title">Education &amp;<span class="highlight"> Experience</span></h2>
     <div class="timeline">
       <div class="timeline__item">
         <span class="timeline__date mono">2023 — Present</span>
@@ -110,7 +113,7 @@
       </div>
       <div class="timeline__item">
         <span class="timeline__date mono">2020— 2021</span>
-        <h3>Schooling ssc 10th</h3>
+        <h3>Schooling SSC 10th</h3>
         <p>Completed at Gitams High school , with 98.5% passing percentage.</p>
       </div>
     </div>
@@ -162,21 +165,7 @@
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="project-card__top">
-          <i class="fa-solid fa-mobile-screen"></i>
-          <div class="project-card__links">
-            <a href="#" aria-label="View code"><i class="fa-brands fa-github"></i></a>
-            <a href="#" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-        <h3>Project Three</h3>
-        <p>One sentence on the problem it solves and one on how you built it.</p>
-        <div class="project-card__tags">
-          <span class="tag mono">Flutter</span>
-          <span class="tag mono">Firebase</span>
-        </div>
-      </article>
+      
 
     </div>
   </section>
@@ -230,7 +219,7 @@
       <div class="cert-card">
         <div class="cert-card__image">
           <img src="assets/IBMAIAnalysist.jpeg" alt="Certificate thumbnail">
-          <a href="assets/certs/cert-1.jpg" target="_blank" class="cert-card__view">
+          <a href="https://drive.google.com/file/d/1YPaGdz6oTfJt8Uot4ND7XV-HSlREvz_W/view?usp=drivesdk" target="_blank" class="cert-card__view">
             View Credentials <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -245,7 +234,7 @@
       <div class="cert-card">
         <div class="cert-card__image">
           <img src="assets/Digi_market.jpeg" alt="Certificate thumbnail">
-          <a href="assets/certs/cert-2.jpg" target="_blank" class="cert-card__view">
+          <a href="https://drive.google.com/file/d/1y6eLP7hDLryKMccF3uSBTL8wciYHg2R7/view?usp=drivesdk" target="_blank" class="cert-card__view">
             View Credentials <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -258,6 +247,38 @@
       </div>
 
      
+    </div>
+  </section>
+<!--####Profiles######-->
+  <section class="section" id="profiles">
+    <p class="section__eyebrow mono">06 / network</p>
+    <h2 class="section__title">       Web Presence — <span class="highlight">Dev Network!</span></h2>
+ 
+    <div class="profiles__avatar">
+      <div class="profiles__avatar-ring">
+        <img src="assets/profile.jpeg" alt="Nanda's profile photo">
+      </div>
+      <p class="profiles__handle">@PeddineniNanditha</p>
+    </div>
+ 
+    <div class="profiles__grid">
+      <a href="https://www.linkedin.com/in/peddineni-nanditha/" class="profile-card" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i>
+        <h4>LinkedIn</h4>
+        <span class="mono">CONNECT</span>
+      </a>
+      <a href="https://github.com/Nanditha1705" class="profile-card" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        <h4>GitHub</h4>
+        <span class="mono">COMMIT</span>
+      </a>
+      
+      
+      <a href="https://www.hackerrank.com/profile/nanditha_23mic71" class="profile-card" target="_blank" rel="noopener">
+        <i class="fa-brands fa-hackerrank"></i>
+        <h4>HackerRank</h4>
+        <span class="mono">CODE</span>
+      </a>
     </div>
   </section>
 
@@ -285,22 +306,34 @@
         <p class="form__status mono" id="formStatus"></p>
       </form>
 
-      <div class="contact__socials">
-        <a href="mailto:nandithapeddineni@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i> nandithapeddineni@gmail.com</a>
-        <a href="https://github.com/Nanditha1705" class="social-link"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://www.linkedin.com/in/peddineni-nanditha/" class="social-link"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        
-      </div>
+      
     </div>
   </section>
+   <div class="socials">
+        <a href="mailto:nanda.kongie45@gmail.com" class="social-link"><i class="fa-solid fa-envelope"></i> nanda.kongie45@gmail.com</a>
+        
+        
+      </div>
 
 </main>
 
 <footer class="footer">
   <p>© <span id="year"></span> Nanda. Built with HTML, CSS &amp; JavaScript.</p>
+  
 </footer>
-
+<!-- ===== RESUME MODAL ===== -->
+<div class="resume-modal" id="resumeModal" aria-hidden="true">
+  <div class="resume-modal__backdrop" id="resumeModalBackdrop"></div>
+  <div class="resume-modal__panel">
+    <button type="button" class="resume-modal__close" id="closeResumeModal" aria-label="Close resume viewer">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <iframe id="resumeIframe" title="Resume PDF" src="/assets/Nanditha_resume.pdf"></iframe>
+  </div>
+</div>
+ 
 <script src="background.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
+
