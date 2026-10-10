@@ -146,3 +146,66 @@ document.addEventListener('keydown', (e) => {
    8. FOOTER YEAR
 ========================================================= */
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* =========================================================
+   9. timeline
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const timelineSections = document.querySelectorAll(".timeline");
+
+    function updateTimelines() {
+        timelineSections.forEach((timelineSection) => {
+            const timelineProgress =
+                timelineSection.querySelector(".timeline-progress");
+
+            const timelineDots =
+                timelineSection.querySelectorAll(".timeline-dot");
+
+            if (!timelineProgress) return;
+
+            const sectionRect = timelineSection.getBoundingClientRect();
+            const sectionHeight = sectionRect.height;
+            const windowHeight = window.innerHeight;
+
+            // Start filling the timeline when its top reaches
+            // the middle of the viewport
+            const startOffset = windowHeight / 2;
+            const scrollDistance = startOffset - sectionRect.top;
+
+            let progressPercentage =
+                (scrollDistance / sectionHeight) * 100;
+
+            progressPercentage = Math.max(
+                0,
+                Math.min(100, progressPercentage)
+            );
+
+            timelineProgress.style.height = `${progressPercentage}%`;
+
+            // Activate dots as the progress line reaches them
+            const lineBottom =
+                timelineProgress.getBoundingClientRect().bottom;
+
+            timelineDots.forEach((dot) => {
+                const dotRect = dot.getBoundingClientRect();
+
+                if (lineBottom >= dotRect.top + dotRect.height / 2) {
+                    dot.classList.add("active");
+                } else {
+                    dot.classList.remove("active");
+                }
+            });
+        });
+    }
+
+    // Update on scroll and resize
+    window.addEventListener("scroll", updateTimelines, {
+        passive: true
+    });
+
+    window.addEventListener("resize", updateTimelines);
+
+    // Set the correct initial state
+    updateTimelines();
+});
